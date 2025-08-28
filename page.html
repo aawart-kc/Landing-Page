@@ -38,7 +38,7 @@
       overflow-x: hidden;
       transition: background 1s ease, color 0.3s;
       animation: gradientMove 12s ease infinite;
-    }
+     }
 
     @keyframes gradientMove {
       0% {background-position: 0% 50%;}
@@ -73,8 +73,13 @@
       margin: 1rem;
       box-shadow: var(--shadow);
       transition: transform 0.3s ease, box-shadow 0.3s;
+      overflow: hidden;
     }
-    .card:hover {transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.6);}
+
+    .card:hover {
+      transform: translateY(-5px); 
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    }
 
     .links {display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin: 1.5rem 0;}
     .links a {
