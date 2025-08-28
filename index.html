@@ -4,32 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0f172a">
-  <title>Aawart K C | Portfolio</title>
-  
+  <title>Aawart K C</title>
   
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     :root {
-      --bg-gradient: linear-gradient(135deg, #0f172a, #0d9488, #059669);
-      --text-color: #e2e8f0;
-      --accent: #10b981;
-      --card-bg: rgba(255, 255, 255, 0.08);
-      --shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      --bg-gradient: linear-gradient(135deg, #0f172a, #1e293b, #3b82f6);
+      --text-color: #f8fafc; 
+      --accent: #16a4ba; 
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     }
 
     .underline { 
       display: inline-block;
       border-bottom: 3px solid var(--accent); 
       padding-bottom: 0px;
-     }
+    }
 
     body.light-mode {
-      --bg-gradient: linear-gradient(135deg, #f1f5f9, #d1fae5, #a7f3d0);
-      --text-color: #1e293b;
-      --accent: #0d9488;
+      --bg-gradient: linear-gradient(135deg, #f0f9ff, #e0f2fe, #bae6fd);
+      --text-color: #1f2937;
+      --accent: #0ea5e9;
       --card-bg: rgba(0, 0, 0, 0.05);
       --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
@@ -44,7 +42,7 @@
       overflow-x: hidden;
       transition: background 1s ease, color 0.3s;
       animation: gradientMove 12s ease infinite;
-     }
+    }
 
     @keyframes gradientMove {
       0% {background-position: 0% 50%;}
@@ -95,9 +93,9 @@
       color: white;
       text-decoration: none;
       font-weight: 500;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, background 0.3s;
     }
-    .links a:hover {transform: scale(1.08);}
+    .links a:hover {transform: scale(1.08); background: #0ea5e9;}
 
     .socials {margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center;}
     .socials a {color: var(--accent); font-size: 1.5rem; transition: transform 0.3s ease;}
@@ -128,12 +126,9 @@
   <canvas id="particle-canvas"></canvas>
 
   <button class="theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
-
   <div class="container">
     <h1>Aawart KC</h1>
     <p>Welcome to my digital home where you can explore my projects, blog, and the things I’m creating along the way. </p>
-
-    
 
     <div class="card">
       <h2 class="underline">Explore</h2>
@@ -152,13 +147,11 @@
       <a href="https://www.linkedin.com/in/aawart-k-c-8b1326314/"><i class="fab fa-linkedin"></i></a>
     </div>
 
-    <footer>© <span id="year"></span> Made by NPX@Aawrt</footer>
+    <footer>© <span id="year"></span> Made by NPX@Aawart</footer>
   </div>
 
 <script>
-  
   document.getElementById('year').textContent = new Date().getFullYear();
-
 
   const toggleBtn = document.querySelector('.theme-toggle');
   const icon = toggleBtn.querySelector('i');
@@ -171,7 +164,6 @@
     }
   });
 
- 
   const canvas = document.getElementById('particle-canvas');
   const ctx = canvas.getContext('2d');
   let particles = [];
@@ -194,7 +186,7 @@
     draw(){
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(16,185,129,0.7)';  
+      ctx.fillStyle = 'rgba(34,211,238,0.7)'; /* particle accent */
       ctx.fill();
     }
     update(){
